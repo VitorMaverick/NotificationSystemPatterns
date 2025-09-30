@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20250930183346"
+  },
+  "applications": "*",
+  "clientRootFolder": "notificationSystem",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tituloMensagem",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "corpoMensagem",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tipoMensagem",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "notificationSystem",
+  "name": "Template",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

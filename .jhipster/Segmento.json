@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20250930183344"
+  },
+  "applications": "*",
+  "clientRootFolder": "notificationSystem",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "canalEnvio",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "agendamentoId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "notificationSystem",
+  "name": "Segmento",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "agendamento",
+      "relationshipName": "agendamento",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

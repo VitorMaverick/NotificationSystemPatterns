@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20250930183345"
+  },
+  "applications": "*",
+  "clientRootFolder": "notificationSystem",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "periodicidade",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "horaEnvio",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "notificationSystem",
+  "name": "Agendamento",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,43 @@
+entity Cliente {
+  nome String required,
+  email String required,
+  telefone String,
+  segmentoId Long required
+}
+
+entity Segmento {
+  nome String required,
+  descricao String,
+  canalEnvio String required,
+  agendamentoId Long required
+}
+
+entity Agendamento {
+  periodicidade String required, // Ex: "diário", "semanal", "mensal"
+  horaEnvio String // Ex: "08:00", "20:30"
+}
+
+entity Template {
+  nome String required,
+  tituloMensagem String required,
+  corpoMensagem String required,
+  tipoMensagem String // Ex: "promoção", "alerta"
+}
+
+entity MensagemEnviada {
+  dataEnvio Instant required,
+  status String, // Ex: "enviada", "falha"
+  clienteId Long required,
+  templateId Long required
+}
+
+relationship ManyToOne {
+  Cliente{segmento} to Segmento
+  Segmento{agendamento} to Agendamento
+  MensagemEnviada{cliente} to Cliente
+  MensagemEnviada{template} to Template
+}
+
+dto Cliente, Segmento, Agendamento, Template, MensagemEnviada with mapstruct
+service Cliente, Segmento, Agendamento, Template, MensagemEnviada with serviceClass
+paginate Cliente, Segmento, Agendamento, Template, MensagemEnviada with pagination
